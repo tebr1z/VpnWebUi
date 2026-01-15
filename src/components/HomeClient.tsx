@@ -8,6 +8,121 @@ type HomeClientProps = {
   lang: Language
 }
 
+type IconProps = {
+  name:
+    | "language"
+    | "chevron-down"
+    | "check"
+    | "download"
+    | "shield"
+    | "verified-user"
+    | "visibility-off"
+    | "lock"
+    | "verified"
+    | "globe"
+    | "bolt"
+    | "security"
+    | "hourglass"
+  className?: string
+}
+
+function Icon({ name, className }: IconProps) {
+  switch (name) {
+    case "language":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.05 9h-3.16a15.8 15.8 0 0 0-1.2-4.08A8.02 8.02 0 0 1 19.05 11ZM12 4.05c.88 1.1 1.63 2.86 2.07 4.95H9.93C10.37 6.91 11.12 5.15 12 4.05ZM4.95 13h3.16c.28 1.44.74 2.86 1.2 4.08A8.02 8.02 0 0 1 4.95 13Zm0-2a8.02 8.02 0 0 1 4.34-4.08c-.46 1.22-.92 2.64-1.2 4.08H4.95Zm7.05 8.95c-.88-1.1-1.63-2.86-2.07-4.95h4.14c-.44 2.09-1.19 3.85-2.07 4.95Zm2.07-6.95H9.93c-.12-.63-.19-1.3-.19-2s.07-1.37.19-2h4.14c.12.63.19 1.3.19 2s-.07 1.37-.19 2Zm1.84 4.08c.46-1.22.92-2.64 1.2-4.08h3.16a8.02 8.02 0 0 1-4.36 4.08Z"
+          />
+        </svg>
+      )
+    case "chevron-down":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M7 10l5 5 5-5H7z" />
+        </svg>
+      )
+    case "check":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+        </svg>
+      )
+    case "download":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h1zM5 19h14v2H5z" />
+        </svg>
+      )
+    case "shield":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z" />
+        </svg>
+      )
+    case "verified-user":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1 13-3-3 1.4-1.4L11 11.2l4.6-4.6L17 8l-6 7z" />
+        </svg>
+      )
+    case "visibility-off":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 6c3.5 0 6.6 2 8 5-1 2.2-2.9 3.9-5.2 4.7l1.7 1.7C19 16.5 21 14.5 22 12 20.2 7.7 16.3 5 12 5c-1.1 0-2.1.2-3.1.5l1.7 1.7c.5-.1 1-.2 1.4-.2zM2.1 3.5 3.5 2.1l18.4 18.4-1.4 1.4-3.2-3.2c-1.6.8-3.3 1.3-5.3 1.3-4.3 0-8.2-2.7-10-7 1.1-2.5 3-4.5 5.5-5.8L2.1 3.5zM6.1 7.5c-1.6 1-2.9 2.4-3.7 4.1 1.4 3 4.4 5 7.6 5 1.4 0 2.7-.4 3.9-1l-1.6-1.6c-.7.3-1.5.4-2.3.4-2.1 0-3.8-1.7-3.8-3.8 0-.8.2-1.6.5-2.3l-1.6-1.6z"
+          />
+        </svg>
+      )
+    case "lock":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm3 8H9V7a3 3 0 0 1 6 0v3z" />
+        </svg>
+      )
+    case "verified":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="m9 16.2-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z" />
+        </svg>
+      )
+    case "globe":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.05 9h-3.16c-.25-1.46-.74-2.84-1.46-4.08A8.02 8.02 0 0 1 19.05 11ZM12 4.05c.92 1.14 1.69 2.92 2.1 4.95H9.9C10.31 6.97 11.08 5.19 12 4.05ZM4.95 13h3.16c.25 1.46.74 2.84 1.46 4.08A8.02 8.02 0 0 1 4.95 13Zm0-2a8.02 8.02 0 0 1 4.57-4.08C8.8 8.16 8.31 9.54 8.06 11H4.95Zm7.05 8.95c-.92-1.14-1.69-2.92-2.1-4.95h4.2c-.41 2.03-1.18 3.81-2.1 4.95Zm2.94-2.87c.72-1.24 1.21-2.62 1.46-4.08h3.16a8.02 8.02 0 0 1-4.62 4.08Z"
+          />
+        </svg>
+      )
+    case "bolt":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M11 21h-1l1-7H7l6-11h1l-1 7h4l-6 11z" />
+        </svg>
+      )
+    case "security":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm0 6a3 3 0 0 1 3 3v2a3 3 0 0 1-6 0v-2a3 3 0 0 1 3-3z" />
+        </svg>
+      )
+    case "hourglass":
+      return (
+        <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M6 2h12v2l-4 4 4 4v2H6v-2l4-4-4-4V2zm2 18h8v2H8z"
+          />
+        </svg>
+      )
+    default:
+      return null
+  }
+}
+
 export function HomeClient({ lang }: HomeClientProps) {
   const router = useRouter()
   const t = translations[lang]
@@ -160,9 +275,9 @@ export function HomeClient({ lang }: HomeClientProps) {
                 aria-haspopup="listbox"
                 aria-expanded={isLangOpen}
               >
-                <span className="material-symbols-outlined text-base text-primary">language</span>
+                <Icon name="language" className="h-4 w-4 text-primary" />
                 {lang.toUpperCase()}
-                <span className="material-symbols-outlined text-base text-slate-400">expand_more</span>
+                <Icon name="chevron-down" className="h-4 w-4 text-slate-400" />
               </button>
               {isLangOpen && (
                 <div
@@ -190,7 +305,7 @@ export function HomeClient({ lang }: HomeClientProps) {
                         {option === "az" && "Azərbaycanca"}
                       </span>
                       {lang === option && (
-                        <span className="material-symbols-outlined text-sm">check</span>
+                        <Icon name="check" className="h-3.5 w-3.5" />
                       )}
                     </button>
                   ))}
@@ -212,7 +327,7 @@ export function HomeClient({ lang }: HomeClientProps) {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
             <div className="glass-nav w-full max-w-md rounded-2xl border border-primary/30 p-8 text-center shadow-[0_0_40px_rgba(19,200,236,0.35)]">
               <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-primary/20 text-primary">
-                <span className="material-symbols-outlined text-2xl">hourglass_top</span>
+                <Icon name="hourglass" className="h-7 w-7" />
               </div>
               <div className="text-sm uppercase tracking-[0.3em] text-slate-400">{t.modal.title}</div>
               <div className="mt-2 text-2xl font-bold text-white">{comingSoonMessage}</div>
@@ -289,22 +404,22 @@ export function HomeClient({ lang }: HomeClientProps) {
                 href="/VexiraVpn.apk"
                 download
               >
-                <span className="material-symbols-outlined">download</span>
+                <Icon name="download" className="h-5 w-5" />
                 <span>{t.store.apk}</span>
               </a>
             </div>
 
             <div className="pt-8 border-t border-white/5 flex flex-wrap gap-8 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-2xl">shield</span>
+                <Icon name="shield" className="h-5 w-5" />
                 <span className="font-bold">{t.trust.audited}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-2xl">verified_user</span>
+                <Icon name="verified-user" className="h-5 w-5" />
                 <span className="font-bold">{t.trust.certified}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-2xl">visibility_off</span>
+                <Icon name="visibility-off" className="h-5 w-5" />
                 <span className="font-bold">{t.trust.noLogs}</span>
               </div>
             </div>
@@ -328,11 +443,11 @@ export function HomeClient({ lang }: HomeClientProps) {
                       <span className="text-xs uppercase text-slate-400 font-bold tracking-widest">{t.status.label}</span>
                       <span className="text-2xl font-bold text-primary flex items-center gap-2">
                         {t.status.protected}
-                        <span className="material-symbols-outlined text-lg">verified</span>
+                        <Icon name="verified" className="h-4 w-4" />
                       </span>
                     </div>
                     <div className="size-12 rounded-full bg-primary/20 flex items-center justify-center border border-primary/40">
-                      <span className="material-symbols-outlined text-primary">lock</span>
+                      <Icon name="lock" className="h-5 w-5 text-primary" />
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
@@ -340,7 +455,7 @@ export function HomeClient({ lang }: HomeClientProps) {
                       <p className="text-xs text-slate-400 font-medium">{t.status.server}</p>
                       <p className="text-lg font-bold">{randomServer.city}</p>
                       <p className="text-[10px] text-primary mt-1 flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[12px]">public</span>
+                        <Icon name="globe" className="h-3 w-3" />
                         {randomServer.country}
                       </p>
                     </div>
@@ -348,7 +463,7 @@ export function HomeClient({ lang }: HomeClientProps) {
                       <p className="text-xs text-slate-400 font-medium">{t.status.ping}</p>
                       <p className="text-lg font-bold">12ms</p>
                       <p className="text-[10px] text-green-400 mt-1 flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[12px]">bolt</span>
+                        <Icon name="bolt" className="h-3 w-3" />
                         {t.status.ultraLow}
                       </p>
                     </div>
@@ -433,7 +548,7 @@ export function HomeClient({ lang }: HomeClientProps) {
               </div>
 
               <div className="absolute top-8 right-8 glass-nav p-3 rounded-xl border border-white/10 animate-bounce">
-                <span className="material-symbols-outlined text-primary">security</span>
+                <Icon name="security" className="h-4 w-4 text-primary" />
               </div>
               <div className="absolute bottom-12 left-12 glass-nav p-3 rounded-xl border border-white/10">
                 <div className="flex items-center gap-2">
